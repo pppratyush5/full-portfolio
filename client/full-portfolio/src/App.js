@@ -1,12 +1,11 @@
 import React from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
 import "./App.css";
+import DiscordHome from "./projects/Discord app/DiscordHome";
 
 function App() {
   return (
     <div className="app">
-      <h1>hello</h1>
+      <DiscordHome></DiscordHome>
     </div>
   );
 }

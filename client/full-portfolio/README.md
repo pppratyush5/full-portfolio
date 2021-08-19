@@ -42,3 +42,15 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+cloud firebase
+
+rules_version = '2';
+service cloud.firestore {
+match /databases/{database}/documents {
+match /{document=\*\*} {
+allow read, write: if
+request.time < timestamp.date(2021, 9, 18);
+}
+}
+}
