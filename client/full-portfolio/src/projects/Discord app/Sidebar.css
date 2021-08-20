@@ -80,8 +80,15 @@
 }
 
 /* not working need to check */
-.sidebar__profileIcon > span {
+.sidebar__profileIcons > span {
+  padding: 15px;
+}
+
+.sidebar__profile > img {
+  width: 60px;
+  border-radius: 50%;
   padding: 10px;
+  cursor: pointer;
 }
 
 .zoom-plus {

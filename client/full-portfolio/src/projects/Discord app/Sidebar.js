@@ -1,6 +1,10 @@
+import { useSelector } from "react-redux";
+import { selectUser } from "../../features/counter/userSlice";
 import "./Sidebar.css";
 import SidebarChannel from "./SidebarChannel";
+import { auth } from "../../firebase";
 const Sidebar = () => {
+  const user = useSelector(selectUser);
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -48,13 +52,16 @@ const Sidebar = () => {
         </div>
       </div>
       <div className="sidebar__profile">
-        <span>
-          avatar
-          <img src="" alt="" />
-        </span>
+        <img
+          onClick={() => {
+            auth.signOut();
+          }}
+          src={user.photo}
+          alt="avatar"
+        />
         <div className="sidebarprofileInfo">
-          <h3>@pppratyush.3</h3>
-          <p>#thisSiMyId</p>
+          <h3>{user.displayName}</h3>
+          <p>{user.uid.substring(0, 5)}</p>
         </div>
         <div className="sidebar__profileIcons">
           <span>mic icon</span>
