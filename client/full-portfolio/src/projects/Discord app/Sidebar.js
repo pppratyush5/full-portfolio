@@ -2,9 +2,32 @@ import { useSelector } from "react-redux";
 import { selectUser } from "../../features/counter/userSlice";
 import "./Sidebar.css";
 import SidebarChannel from "./SidebarChannel";
-import { auth } from "../../firebase";
+import db, { auth } from "../../firebase";
+import { useEffect, useState } from "react";
 const Sidebar = () => {
   const user = useSelector(selectUser);
+  const [channels, setChannels] = useState([]);
+  useEffect(() => {
+    db.collection("channels").onSnapshot((snapShot) => {
+      setChannels(
+        snapShot.docs.map((doc) => ({
+          id: doc.id,
+          channel: doc.data(),
+        }))
+      );
+    });
+  }, []);
+
+  const handleAddChannel = () => {
+    // alert(1);
+    const channelName = prompt("Enter New channel name");
+    if (channelName) {
+      db.collection("channels").add({
+        channelName: channelName,
+      });
+    }
+  };
+
   return (
     <div className="sidebar">
       <div className="sidebar__top">
@@ -25,16 +48,19 @@ const Sidebar = () => {
               // src="https://img.icons8.com/ios-filled/50/000000/chevron-down.png"
             />
             <h4 className="textChannels">Text Channels</h4>
-            <span>Add Icon</span>
+            <span onClick={handleAddChannel}>Add Icon</span>
           </div>
         </div>
         <div className="channelList">
-          <SidebarChannel />
-          <SidebarChannel />
-          <SidebarChannel />
-          <SidebarChannel />
-          <SidebarChannel />
-          <SidebarChannel />
+          {channels.map(({ id, channel }) => {
+            return (
+              <SidebarChannel
+                key={id}
+                id={id}
+                channelName={channel.channelName}
+              />
+            );
+          })}
         </div>
       </div>
 

@@ -1,9 +1,10 @@
 import "./SidebarChannel.css";
-const SidebarChannel = ({ id, channel }) => {
+const SidebarChannel = ({ id, channelName }) => {
   return (
     <div className="sidebarchannel">
       <h3>
-        <span className="sidebarchannel__hash">#</span>Youtube
+        <span className="sidebarchannel__hash">#</span>
+        {channelName}
       </h3>
     </div>
   );
