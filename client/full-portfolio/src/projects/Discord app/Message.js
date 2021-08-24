@@ -1,14 +1,18 @@
 import "./Message.css";
-const Message = () => {
+const Message = ({ timestamp, user, message }) => {
   return (
     <div className="message">
-      <span>avatar</span>
+      <span>
+        <img src={user.photo} alt="user photo" />
+      </span>
       <div className="message__info">
         <h4>
-          pppratyush
-          <span className="message__timestamp">this is a time span</span>
+          {user.displayName}
+          <span className="message__timestamp">
+            {new Date(timestamp?.toDate()).toUTCString()}
+          </span>
         </h4>
-        <p>this is a message</p>
+        <p>{message}</p>
       </div>
     </div>
   );

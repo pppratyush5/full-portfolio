@@ -19,7 +19,6 @@ const Sidebar = () => {
   }, []);
 
   const handleAddChannel = () => {
-    // alert(1);
     const channelName = prompt("Enter New channel name");
     if (channelName) {
       db.collection("channels").add({

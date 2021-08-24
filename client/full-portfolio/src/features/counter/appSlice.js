@@ -1,18 +1,4 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { fetchCount } from "./counterAPI";
-
-const initialState = {
-  value: 0,
-  status: "idle",
-};
-
-export const incrementAsync = createAsyncThunk(
-  "app/fetchCount",
-  async (amount) => {
-    const response = await fetchCount(amount);
-    return response.data;
-  }
-);
+import { createSlice } from "@reduxjs/toolkit";
 
 export const appSlice = createSlice({
   name: "app",
@@ -21,15 +7,14 @@ export const appSlice = createSlice({
     channelName: null,
   },
   reducers: {
-    setchannelId: (state, action) => {
-      state.app += action.payload;
-      state.value += 1;
+    setChannelInfo: (state, action) => {
+      state.channelId = action.payload.channelId;
+      state.channelName = action.payload.channelName;
     },
   },
 });
 
-export const { setchannelId } = appSlice.actions;
-
+export const { setChannelInfo } = appSlice.actions;
 export const selectchannelId = (state) => state.app.channelId;
 export const selectchannelName = (state) => state.app.channelName;
 export default appSlice.reducer;
