@@ -2,9 +2,7 @@ import "./Message.css";
 const Message = ({ timestamp, user, message }) => {
   return (
     <div className="message">
-      <span>
-        <img src={user.photo} alt="user photo" />
-      </span>
+      <img className="user__photo" src={user.photo} alt="user photo" />
       <div className="message__info">
         <h4>
           {user.displayName}

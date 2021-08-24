@@ -86,7 +86,7 @@ const Sidebar = () => {
         />
         <div className="sidebarprofileInfo">
           <h3>{user.displayName}</h3>
-          <p>{user.uid.substring(0, 5)}</p>
+          <p>{user.email}</p>
         </div>
         <div className="sidebar__profileIcons">
           <span>mic icon</span>

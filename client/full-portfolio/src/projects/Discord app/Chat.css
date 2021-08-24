@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
   color: gray;
-  padding: 10px;
+  padding: 20px;
 }
 
 .chatHeader__hash {
@@ -62,6 +62,7 @@
 
 /* chat messages starts */
 .chat__messages {
+  overflow: scroll;
   flex: 1;
 }
 /* chat messages ends */
