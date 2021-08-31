@@ -4,6 +4,10 @@ import "./Sidebar.css";
 import SidebarChannel from "./SidebarChannel";
 import db, { auth } from "../../firebase";
 import { useEffect, useState } from "react";
+// import down_arrow_white from "../../assets/arrow_down_white.svg";
+import add_circle_white from "../../assets/add_circle_white.svg";
+import signal_cellular from "../../assets/signal_cellular_alt_green.svg";
+
 const Sidebar = () => {
   const user = useSelector(selectUser);
   const [channels, setChannels] = useState([]);
@@ -31,23 +35,18 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar__top">
         <h3>Pratyush Kumar</h3>
-        {/* <img src="./src/assets /downArrow.png" width="50" height="50" alt="" /> */}
-        <img
-          width="15"
-          height="15"
-          // src="https://img.icons8.com/ios-filled/50/000000/chevron-down.png"
-        />
+        {/* <img width="15" height="15" src={down_arrow_white} /> */}
       </div>
       <div className="sidebar__channels">
         <div className="sidebar__channersHeader">
           <div className="channelHeader">
-            <img
+            {/* <img
               width="15"
               height="15"
               // src="https://img.icons8.com/ios-filled/50/000000/chevron-down.png"
-            />
-            <h4 className="textChannels">Text Channels</h4>
-            <span onClick={handleAddChannel}>Add Icon</span>
+            /> */}
+            <h3 className="textChannels">Channels</h3>
+            <img onClick={handleAddChannel} src={add_circle_white} alt="" />
           </div>
         </div>
         <div className="channelList">
@@ -65,15 +64,15 @@ const Sidebar = () => {
 
       <div className="sidebar__voice">
         <span className="sidebar__voiceIcon" fontSize="large">
-          signal icons
+          <img src={signal_cellular} alt="" />
         </span>
         <div className="sidebar__voiceInfo">
           <h3>Voice Connected</h3>
           <p>Stream</p>
         </div>
         <div className="sidebar__voiceIcons">
-          <span>info icon</span>
-          <span>call Icon</span>
+          {/* <span>info icon</span>
+          <span>call Icon</span> */}
         </div>
       </div>
       <div className="sidebar__profile">
@@ -89,9 +88,9 @@ const Sidebar = () => {
           <p>{user.email}</p>
         </div>
         <div className="sidebar__profileIcons">
-          <span>mic icon</span>
+          {/* <span>mic icon</span>
           <span>headSet Icon</span>
-          <span>setting Icon</span>
+          <span>setting Icon</span> */}
         </div>
       </div>
       {/* <div>

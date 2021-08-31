@@ -9,6 +9,7 @@ import firebase from "firebase";
 import "./Chat.css";
 import Message from "./Message";
 import { selectUser } from "../../features/counter/userSlice";
+import send_white from "../../assets/send_white.svg";
 
 const Chat = () => {
   // const user = useSelector(selectchannelId);
@@ -23,7 +24,7 @@ const Chat = () => {
       db.collection("channels")
         .doc(channelId)
         .collection("messages")
-        .orderBy("timestamp", "desc")
+        .orderBy("timestamp")
         .onSnapshot((snapshot) => {
           setMessages(snapshot.docs.map((doc) => doc.data()));
         });
@@ -52,19 +53,25 @@ const Chat = () => {
           </h3>
         </div>
         <div className="chatHeader__right">
-          <span className="right__icon">noti icon</span>
+          {/* <span className="right__icon">noti icon</span>
           <span className="right__icon">editlocation icon</span>
           <span className="right__icon">people alt icon</span>
           <div className="chatHeader__search">
             <input placeholder="Search" type="text" />
           </div>
           <span className="right__icon">search icon</span>
-          <span className="right__icon">help icon</span>
+          <span className="right__icon">help icon</span> */}
         </div>
       </div>
       {/* chat header ends */}
 
-      <div className="chat__messages">
+      <div
+        className="chat__messages"
+        // onScroll={() => {
+        //   window.screenY = 800;
+        //   console.log(window.screenY);
+        // }}
+      >
         {messages.map((message) => {
           return (
             <Message
@@ -79,7 +86,7 @@ const Chat = () => {
 
       {/* input starts*/}
       <div className="chat__input">
-        <span>Add circle icon</span>
+        <img src={send_white} alt="" />
         <form>
           <input
             disabled={!channelId}
@@ -88,7 +95,9 @@ const Chat = () => {
               setInput(e.target.value);
             }}
             type="text"
-            placeholder={`Message #${channelName}`}
+            placeholder={`Message ${
+              channelName ? "#" + channelName : "Select Channel"
+            }`}
           />
           <button
             type="submit"
@@ -99,9 +108,9 @@ const Chat = () => {
           </button>
         </form>
         <div className="chat__inputIcon">
-          <span>card gift icon</span>
+          {/* <span>card gift icon</span>
           <span>GIF</span>
-          <span>smile</span>
+          <span>smile</span> */}
         </div>
       </div>
       {/* input ends */}

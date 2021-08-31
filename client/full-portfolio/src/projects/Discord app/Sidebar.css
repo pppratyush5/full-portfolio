@@ -30,9 +30,9 @@
 }
 
 .sidebar__channersHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
   padding: 10px;
   color: gray;
   background-color: 2f3135;
@@ -40,6 +40,7 @@
 .channelHeader {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .sidebar__voice,
