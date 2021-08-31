@@ -27,6 +27,7 @@ const Sidebar = () => {
     if (channelName) {
       db.collection("channels").add({
         channelName: channelName,
+        userId: user.uid,
       });
     }
   };
@@ -51,13 +52,14 @@ const Sidebar = () => {
         </div>
         <div className="channelList">
           {channels.map(({ id, channel }) => {
-            return (
-              <SidebarChannel
-                key={id}
-                id={id}
-                channelName={channel.channelName}
-              />
-            );
+            if (user.uid === channel.userId)
+              return (
+                <SidebarChannel
+                  key={id}
+                  id={id}
+                  channelName={channel.channelName}
+                />
+              );
           })}
         </div>
       </div>
