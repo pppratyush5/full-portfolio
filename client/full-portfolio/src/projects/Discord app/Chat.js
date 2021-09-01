@@ -76,8 +76,8 @@ const Chat = () => {
           return (
             <Message
               key={message?.timestamp?.seconds}
-              timestamp={message.timestamp}
-              message={message.message}
+              timestamp={message?.timestamp}
+              message={message?.message}
               user={message.user}
             ></Message>
           );
