@@ -33,8 +33,9 @@ function App() {
     <div className="app">
       {user ? (
         //  <DiscordHome></DiscordHome>
-        <TravelHome></TravelHome>
+        <Login></Login>
       ) : (
+        // <TravelHome></TravelHome>
         <Login></Login>
       )}
     </div>
