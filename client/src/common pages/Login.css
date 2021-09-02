@@ -1,5 +1,5 @@
 .login {
-  background-color: #27baf3;
+  background-color: gold;
   height: 100vh;
 }
 
@@ -7,27 +7,92 @@
   display: flex;
   height: 60%;
   width: 70%;
-  padding: 5px;
+  /* padding: 5px; */
   position: relative;
   top: 15%;
   left: 15%;
+  box-shadow: 0px 22px 37px -15px;
+  justify-content: center;
+  align-self: center;
+  border-radius: 20px;
 }
-
 .login__left__container {
-  background-color: #5091cd;
+  background-color: deepskyblue;
   border-radius: 20px 0px 0px 20px;
-  flex: 6;
+  flex: 4;
   padding: 10px;
-  font-size: 24px;
+  font-size: 23px;
   color: white;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  letter-spacing: 2px;
 }
 
+.welcome__text4::after,
+.welcome__text3::after,
+.welcome__text2::after,
+.welcome__text1::after {
+  content: "|";
+  /* background-color: white; */
+  /* height: 30px; */
+  width: 0px;
+  /* color: white; */
+  position: absolute;
+  /* animation: typing 10s linear; */
+  animation: typing 15s linear;
+}
+
+@keyframes typing {
+  0% {
+    background-color: red;
+    left: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+  }
+}
+
+/* @keyframes typing {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+} */
+
 .login__right__container {
+  display: flex;
   border-radius: 0px 20px 20px 0px;
-  /* align-items: center; */
   background-color: white;
-  flex: 6;
+  flex-direction: column;
+  flex: 6 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__text {
+  color: #131313de;
 }
 
 .login__right__container > button {
@@ -35,9 +100,10 @@
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #5091cd;
+  background-color: deepskyblue;
   cursor: pointer;
-  color: white;
+  color: #3a3535de;
   font-size: 16px;
   font-weight: bold;
+  box-shadow: 0px 22px 37px -15px;
 }
