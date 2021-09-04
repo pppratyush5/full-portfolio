@@ -13,11 +13,12 @@ const Login = () => {
     <div className="login">
       <div className="login__container">
         <div className="login__left__container">
-          <div className="welcome__text1">Hi, I am Pratyush.</div>
-          <div className="welcome__text2">Welcome to my portfolio.</div>
-          <div className="welcome__text3">Please Login with Google.</div>
-          <div className="welcome__text4">Thanks for visiting</div>
-          {/* <span className="login__welcome__text"></span> */}
+          <div className="login__welcome__text">
+            <h4 className="welcome__text1">Hi, I am Pratyush.</h4>
+            <h4 className="welcome__text2">Welcome to my portfolio.</h4>
+            <h4 className="welcome__text3">Please Login with Google.</h4>
+            <h4 className="welcome__text4">Thanks for visiting</h4>
+          </div>
         </div>
         <div className="login__right__container">
           <h2 className="login__text">Please login with Google</h2>
