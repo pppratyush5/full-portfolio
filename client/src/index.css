@@ -17,5 +17,40 @@ code {
 }
 
 button {
-  outline: none;
+  min-width: 190px;
+  cursor: pointer;
+  font-weight: bold;
 }
+
+input,
+button {
+  width: 100%;
+  outline: none;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid gainsboro;
+}
+
+/* COMMON CSS STARTS */
+
+.margin-t-b-5 {
+  margin: 5px 0px 5px 0px;
+}
+
+.margin-l-15 {
+  margin-left: 15px;
+}
+
+.displayFlexJustifyAlignCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.padding-l-r-10 {
+  padding: 0px 10px;
+}
+/* COMMON SCC ENDS */
