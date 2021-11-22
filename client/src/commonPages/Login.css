@@ -1,0 +1,114 @@
+.login {
+  /* background-color: rgb(111, 243, 23);
+  height: calc(100vh - 40px);
+  padding: 20px;
+  color: white;
+  font-size: 26px; */
+}
+
+.login__right__container form {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* flex-direction: column; */
+  /* margin: 20px; */
+}
+
+.other__login__option {
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/* .login__welcome__text h4 {
+  animation: typing 5s steps(17) infinite;
+  overflow: hidden;
+  height: 30px;
+  white-space: nowrap;
+  position: relative;
+  margin: 10px;
+  width: 15px;
+  border-right: 1.5px solid #fff;
+}
+
+@keyframes typing {
+  0% {
+    width: 0%;
+  }
+  25% {
+    width: 25%;
+  }
+  50% {
+    width: 50%;
+  }
+  75% {
+    width: 75%;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+
+/* .login__container {
+  display: flex;
+  height: 60%;
+  width: 70%;
+  position: relative;
+  top: 15%;
+  left: 15%;
+  box-shadow: 0px 22px 37px -15px;
+  justify-content: center;
+  align-self: center;
+  border-radius: 20px;
+}
+.login__left__container {
+  background-color: deepskyblue;
+  border-radius: 20px 0px 0px 20px;
+  flex: 4;
+  padding: 10px;
+  font-size: 23px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+.login__right__container {
+  display: flex;
+  border-radius: 0px 20px 20px 0px;
+  background-color: white;
+  flex-direction: column;
+  flex: 6 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.login__text {
+  color: #131313de;
+}
+
+.login__right__container > button {
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: deepskyblue;
+  cursor: pointer;
+  color: #3a3535de;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0px 22px 37px -15px;
+}
+
+@media screen and (max-width: 420px) {
+  .login__container {
+    display: block;
+  }
+
+  .login__left__container {
+    background-color: pink;
+  }
+} */

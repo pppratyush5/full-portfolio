@@ -1,0 +1,73 @@
+.mainContainer {
+  background-color: greenyellow;
+  height: calc(100vh);
+  display: flex;
+  justify-content: center;
+  color: rgb(29, 27, 27);
+}
+
+.leftContainer {
+  background-color: #bde96f;
+  margin: 50px 0px;
+  width: 40%;
+  border-radius: 20px 0px 0px 20px;
+}
+.rightContainer {
+  background-color: white;
+  margin: 50px 0px;
+  width: 40%;
+  border-radius: 0px 20px 20px 0px;
+}
+.rightContainer > .firstPart {
+  padding-top: 25%;
+}
+
+.rightMainContainer {
+  margin: 20% 14%;
+}
+.or {
+  text-align: center;
+}
+
+.or::after {
+  content: "";
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #9a9898;
+}
+
+.or::before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  margin-top: 10px;
+  background-color: #9a9898;
+  margin-left: -110px;
+}
+
+div > button {
+  /* font-weight: bold;
+  background-color: white;
+  border: 1px solid gainsboro; */
+}
+
+.fbButton {
+  color: white;
+  background-color: #1877f2;
+}
+
+.fbLogo {
+  background: white;
+  border-radius: 50%;
+}
+.googleButton {
+}
+
+.loginText {
+  color: yellowgreen;
+  cursor: pointer;
+}
