@@ -1,24 +1,26 @@
 import { auth, provider } from "../firebase";
 import "./Login.css";
 import { useRef, useState } from "react";
-import { useAuth } from "../contexts/AuthContext";
-import { Link, useHistory } from "react-router-dom";
+// import { useAuth } from "../contexts/AuthContext";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
-  const { signup, currentUser, login } = useAuth();
+  // const { signup, currentUser, login } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const history = useHistory();
+  const history = useNavigate();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
       setError("");
+      emailRef.current.style()
+      console.log(emailRef.current.focus())
       setLoading(true);
-      let res = await login(emailRef.current.value, passwordRef.current.value);
+      // let res = await login(emailRef.current.value, passwordRef.current.value);
       history.push("/discord");
     } catch (e) {
       setError("Fail to create account");

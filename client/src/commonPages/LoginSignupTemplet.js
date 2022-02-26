@@ -6,11 +6,11 @@ import fbLogo from "../assets/fbLogo.png";
 import Login from "./Login";
 import { useState } from "react";
 import { auth, provider } from "../firebase";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 
 const LoginSignupTemplet = () => {
   const [loadLogin, setLoadLogin] = useState(false);
-  const history = useHistory();
+  const history = useNavigate();
 
   const switchForm = () => {
     setLoadLogin(!loadLogin);

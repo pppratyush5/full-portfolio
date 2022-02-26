@@ -1,14 +1,14 @@
 import { auth, provider } from "../firebase";
 import "./SignUp.css";
 import { useRef, useState } from "react";
-import { useAuth } from "../contexts/AuthContext";
+// import { useAuth } from "../contexts/AuthContext";
 import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
-  const { signup, currentUser } = useAuth();
+  // const { signup, currentUser } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -22,7 +22,7 @@ const SignUp = () => {
     try {
       setError("");
       setLoading(true);
-      await signup(emailRef.current.value, passwordRef.current.value);
+      // await signup(emailRef.current.value, passwordRef.current.value);
     } catch (e) {
       setError("Fail to create account");
     }
