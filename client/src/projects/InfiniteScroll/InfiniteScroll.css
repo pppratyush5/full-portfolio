@@ -1,0 +1,16 @@
+.cardRapper{
+    display: flex;
+    flex-wrap: wrap;
+    transition: ease-in;
+}
+
+.card{
+    background-color: cadetblue;
+    width: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    align-content: center;
+    margin: 5px;
+    padding: 10px;
+    transition: 500ms ease-in ;
+}

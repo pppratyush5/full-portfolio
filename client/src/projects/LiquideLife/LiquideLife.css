@@ -1,0 +1,186 @@
+.header{
+    background-color: #0b0816;
+    padding: 2.5rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.loungeButton{
+    background: linear-gradient(90deg,#f06859,#f5b344);
+    border:none;
+    border-radius: 50px;
+    color: #333333;
+    font-weight: 600;
+    width: 180px;
+}
+
+.main{
+    background-color: #131025;
+    height: 160rem;
+}
+
+.main > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+}
+
+.main::after{
+    content: "";
+    opacity: .5;
+    width: 90%;
+    height: 25%;
+    background: radial-gradient(50% 50% at 50% 50%,#7341ff 0,rgba(116,80,255,.34) 52.37%,rgba(116,81,255,.16) 74.24%,rgba(116,81,255,0) 100%) no-repeat top;
+    position: absolute;
+    left: 50%;
+    top: 22%;
+    transform: translate(-50%,-40%);
+    pointer-events: none;   
+    z-index: 0;
+}
+
+.logo{
+    width: 8.8rem;
+}
+
+.menuItem{
+    color: #d9d8db;
+    font-size: 1.125rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.menuItem > a{
+    margin: 0 2rem;
+    padding-top: 5px;
+}
+
+.main > div > img{
+    width: 48rem;
+    z-index: 9;
+    position: absolute;
+    top: 9rem;
+}
+
+.welcomeText{
+    color: white;
+    z-index: 99;
+    position: relative;
+    top: 4rem;
+}
+
+.mainWelcomeText{
+    font-size: 8rem;
+}
+
+.subWelcomeText{
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.inputNumber{
+    background-color: white;
+    color: #0b0816;
+    border-radius: 50px;
+    width: 32rem;
+    display: flex;
+    height: 4rem;
+    align-items: center;
+    border: 2px goldenrod solid;
+    font-size: 19px;
+    padding: 5px;
+}
+
+.inputWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.inputNumber > input{
+    border: none;
+    font-size: 19px;
+    color: #bbcbd1;
+    opacity: 0.6;
+
+}
+.inputNumber > label{
+    color: #7c7c7c;
+    margin-left: 20px;
+}
+
+.inputNumber > .loungeButton{
+    height: 4rem;
+    width: 60rem;
+    position: relative;
+}
+
+.referingText{
+    position: relative;
+    margin-top: 15px;
+}
+
+.sectionOne > h1 {
+    margin-top: 20rem;
+    color: wheat;
+    font-size: 8rem;
+}
+
+.sectionOne > div > span > svg{
+    margin: 35px 10px;
+}
+
+.valueInPercentage{
+    background: -webkit-linear-gradient(29deg,#7770ff,#f047be 34.92%,#f9d894 66.68%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 3.75rem;
+    font-weight: 900;
+}
+
+.offUserSays{
+    color: white;
+    font-size: 19px;
+}
+
+.description{
+    font-size: 3.75rem;
+    line-height: 1;
+    background :-webkit-linear-gradient(94.08deg,#f592a8 -64.73%,#f9d894);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 3rem;
+}
+
+.isBiggestText{
+    color: white;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+.sectionTwoTitle{
+    margin-top: 22rem;
+    font-size: 1.5rem;
+    font-weight: 900;
+    background :-webkit-linear-gradient(94.08deg,#f592a8 -64.73%,#f9d894);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sectionTwoMain{
+    display: flex;
+    text-align: left;
+    margin-top: 3.5rem ;
+    color: white;
+}
+
+.number{
+    font-size: 15px;
+}

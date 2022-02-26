@@ -1,0 +1,47 @@
+$color-main:#343539;
+$background-color:#0c100fe3;
+$text-color:#b8b8b8;
+
+.fallback{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+
+.test{
+    background-color: $background-color;
+    color: $text-color;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: $color-main;
+    transition: 500ms ease-in;
+    background-color: #3e51a0;
+
+}
+
+.square{
+    width: 400px;
+    height: 400px;
+    background-color: $color-main;
+    transition: 500ms ease-in;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10px;
+}
+
+.cardItem{
+    background-color: $color-main;
+    width: 200px;
+    height: 250px;
+}
+
+textarea {
+    resize: none;
+}
